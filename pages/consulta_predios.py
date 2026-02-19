@@ -8,6 +8,7 @@ from shapely import wkt
 from shapely.geometry import Point
 import leafmap.foliumap as leafmap
 from folium.plugins import MeasureControl, MousePosition
+from folium import Element, MacroElement
 
 # Conexion con base de datos de Postgres alojada en Aiven
 def conectar_bd():
@@ -472,3 +473,4 @@ elif option == 'COORDENADAS':
         except NameError as e:
             st.sidebar.markdown(f":gray[*{e}*]")
             m_streamlit = m.to_streamlit(800, 600)
+
